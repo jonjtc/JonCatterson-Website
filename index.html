@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>We Buy Homes Fast - Jon Catterson</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.jump-to-form').forEach(button => {
+        button.addEventListener('click', () => {
+          document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+    });
+  </script>
 </head>
 <body class="bg-gray-100 font-sans">
   <!-- Header -->
@@ -12,47 +21,116 @@
     <div class="container mx-auto px-4 text-center">
       <h1 class="text-3xl font-bold">Jon Catterson Buys Homes</h1>
       <p class="mt-2 text-lg">Fast, Fair Cash Offers for Your Home</p>
+      <button class="mt-4 bg-white text-blue-600 py-2 px-4 rounded-md hover:bg-gray-200 jump-to-form">Get Your Offer Now</button>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main class="container mx-auto px-4 py-8">
-    <section class="bg-white rounded-lg shadow-md p-6 max-w-2xl mx-auto">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Sell Your Home the Easy Way</h2>
-      <p class="text-gray-600 mb-4">
-        Hi, I’m Jon, a local real estate investor. I buy homes directly for cash, so you can skip the hassle of repairs, showings, or long waits. Whether your home didn’t sell on the market or you’re ready to move on, I can offer a fair price and close quickly.
-      </p>
-      <p class="text-gray-600 mb-6">
-        Interested? Fill out the form below, and I’ll reach out to discuss your property. No pressure, just a friendly conversation!
-      </p>
+  <!-- How It Works -->
+  <section class="container mx-auto px-4 py-8">
+    <h2 class="text-2xl font-semibold text-gray-800 text-center mb-6">How It Works</h2>
+    <div class="space-y-4">
+      <p class="text-gray-600">Selling your home doesn’t have to be complicated. Here’s how I make it easy:</p>
+      <ol class="list-decimal list-inside text-gray-600 space-y-2">
+        <li>Submit your details using the form below—I’ll review your property.</li>
+        <li>I'll contact you to discuss your property (no matter what) and schedule a visit if we can work together further.</li>
+        <li>I'll call you to provide a fair cash offer, tailored to your home's "as is" value.</li>
+        <li>Close on your timeline, with no repairs or showings needed.</li>
+      </ol>
+      <p class="text-gray-600 mt-4">With high equity in your home, this could be a quick way to cash out. Ready to start?</p>
+      <button class="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 jump-to-form">Contact Me Today</button>
+    </div>
+  </section>
 
-      <!-- Contact Form -->
-      <form action="https://formspree.io/f/xwpqvgrr" method="POST" class="space-y-4">
-        <div>
-          <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-          <input type="text" id="name" name="name" required class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-        </div>
-        <div>
-          <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
-          <input type="tel" id="phone" name="phone" required class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-        </div>
-        <div>
-          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-          <input type="email" id="email" name="email" required class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-        </div>
-        <div>
-          <label for="message" class="block text-sm font-medium text-gray-700">Message (Optional)</label>
-          <textarea id="message" name="message" rows="4" class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-        </div>
-        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition">Submit</button>
-      </form>
-    </section>
-  </main>
+  <!-- FAQs -->
+  <section class="container mx-auto px-4 py-8 bg-white">
+    <h2 class="text-2xl font-semibold text-gray-800 text-center mb-6">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      <details class="text-gray-600">
+        <summary class="font-medium">How fast can you close?</summary>
+        <p>I can close in as little as 7-14 days, depending on your needs.</p>
+      </details>
+      <details class="text-gray-600">
+        <summary class="font-medium">Do I need to make repairs?</summary>
+        <p>No, I buy homes as-is, saving you time and money.</p>
+      </details>
+      <details class="text-gray-600">
+        <summary class="font-medium">Is there any obligation?</summary>
+        <p>Not at all—just a no-pressure conversation to explore your options.</p>
+      </details>
+      <details class="text-gray-600">
+        <summary class="font-medium">What types of houses do you buy?</summary>
+        <p>I buy all types of houses, regardless of condition, age, or location in the Sacramento area. Whether it's a fixer-upper, inherited property, or a home that's in great shape but you need to sell quickly, I'm interested.</p>
+      </details>
+      <details class="text-gray-600">
+        <summary class="font-medium">How do you determine the offer price?</summary>
+        <p>I base my cash offer on the home's current "as-is" value, recent comparable sales in the area, and any necessary repairs or updates. My goal is to provide a fair, competitive price that works for both of us without the need for appraisals or negotiations.</p>
+      </details>
+      <button class="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 jump-to-form">Get Your Offer Now</button>
+      <details class="text-gray-600">
+        <summary class="font-medium">Are there any fees or commissions?</summary>
+        <p>No, there are no fees, commissions, or hidden costs when selling to me. Unlike traditional real estate agents who charge 5-6% in commissions, I cover all closing costs, making the process simple and cost-free for you.</p>
+      </details>
+      <details class="text-gray-600">
+        <summary class="font-medium">What if my house is in foreclosure?</summary>
+        <p>I can help if your home is facing foreclosure. With a quick cash offer, we can close before the foreclosure process completes, potentially saving your credit and giving you peace of mind.</p>
+      </details>
+      <details class="text-gray-600">
+        <summary class="font-medium">Can I sell if I have tenants in the property?</summary>
+        <p>Yes, I buy properties with tenants. I can handle the details, whether it's assuming the lease or working out a smooth transition, so you don't have to worry about evictions or tenant issues.</p>
+      </details>
+      <details class="text-gray-600">
+        <summary class="font-medium">How is selling to you different from listing with an agent?</summary>
+        <p>Selling to me is faster and hassle-free—no need for open houses, staging, or waiting for buyers. You get a cash offer in days, close on your schedule, and avoid agent commissions or repair demands.</p>
+      </details>
+      <details class="text-gray-600">
+        <summary class="font-medium">What areas do you serve?</summary>
+        <p>I primarily serve Sacramento County and surrounding areas in California. If your property is nearby, reach out—I’m flexible.</p>
+      </details>
+      <button class="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 jump-to-form mt-4">Get Started Now</button>
+    </div>
+  </section>
+
+  <!-- Contact Information -->
+  <section class="container mx-auto px-4 py-8">
+    <h2 class="text-2xl font-semibold text-gray-800 text-center mb-6">Contact Information</h2>
+    <p class="text-gray-600 text-center">Have questions or ready to sell? Reach out directly:</p>
+    <p class="text-gray-600 text-center mt-2">Phone: (916) 318-8790</p>
+    <p class="text-gray-600 text-center">Address: 8399 Folsom Blvd. Ste 1 #4008 Sacramento CA 95826</p>
+    <button class="mt-4 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 jump-to-form">Sell Your Home Now</button>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact-form" class="container mx-auto px-4 py-8 bg-gray-200">
+    <h2 class="text-2xl font-semibold text-gray-800 text-center mb-6">Get in Touch</h2>
+    <p class="text-gray-600 text-center mb-6">Fill out the form below, and I’ll contact you to discuss your property!</p>
+    <form action="https://formspree.io/f/xwpqvgrr" method="POST" class="max-w-md mx-auto space-y-4">
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+        <input type="text" id="name" name="name" required class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      <div>
+        <label for="address" class="block text-sm font-medium text-gray-700">Property Address</label>
+        <input type="text" id="address" name="address" required class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      <div>
+        <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+        <input type="email" id="email" name="email" required class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      <div>
+        <label for="message" class="block text-sm font-medium text-gray-700">Message (Optional)</label>
+        <textarea id="message" name="message" rows="4" class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+      </div>
+      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition">Submit</button>
+    </form>
+  </section>
 
   <!-- Footer -->
   <footer class="bg-gray-800 text-white py-4 text-center">
-    <p>Contact me directly at (916) 318-8790 or 8399 Folsom Blvd. Ste 1 #4008 Sacramento CA 95826</p>
-    <p class="mt-2">&copy; 2025 Jon Catterson Buys Homes. All rights reserved.</p>
+    <p>&copy; 2025 Jon Catterson Buys Homes. All rights reserved.</p>
   </footer>
 </body>
 </html>
